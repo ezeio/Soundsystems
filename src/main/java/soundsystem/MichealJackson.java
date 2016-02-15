@@ -1,5 +1,10 @@
 package soundsystem;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
+@Qualifier("micheal")
 public class MichealJackson implements CompactDisc {
 
     private String title = "Dangerous";
