@@ -20,7 +20,7 @@ public class CDPlayer implements MediaPlayer {
 
 
     @Autowired
-    @Qualifier("micheal")
+    @Qualifier("blank")
     public void insertDisc(CompactDisc cd){
         this.cd = cd;
     }

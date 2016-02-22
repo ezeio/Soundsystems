@@ -11,7 +11,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import soundsystem.CompactDisc;
 import soundsystem.MediaPlayer;
-import soundsystem.MichealJackson;
 import static org.junit.Assert.*;
 import org.junit.Rule;
 
@@ -20,7 +19,7 @@ import org.junit.Rule;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes= CDConfig.class)
+@ContextConfiguration(classes= SoundSystemConfig.class)
 public class CDPlayerTest {
 
     @Rule
@@ -30,7 +29,7 @@ public class CDPlayerTest {
     private MediaPlayer player;
 
     @Autowired
-    @Qualifier("michealJackson")
+    @Qualifier("blank")
     private CompactDisc cd;
 
     @Test
@@ -43,7 +42,7 @@ public class CDPlayerTest {
     @Test
     public void play(){
         player.play();
-        assertEquals("Playing Dangerous by Micheal Jackson\n",
+        assertEquals("Playing Dangerously in love by Beyonce\n",
                 log.getLog());
 
     }
